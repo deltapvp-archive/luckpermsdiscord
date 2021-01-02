@@ -1,9 +1,6 @@
 package net.deltapvp.luckpermsdiscord;
 
 import club.minnced.discord.webhook.WebhookClient;
-import club.minnced.discord.webhook.WebhookClientBuilder;
-import club.minnced.discord.webhook.send.WebhookEmbed;
-import club.minnced.discord.webhook.send.WebhookEmbedBuilder;
 import me.lucko.luckperms.common.api.LuckPermsApiProvider;
 import me.lucko.luckperms.common.config.LuckPermsConfiguration;
 import me.lucko.luckperms.common.config.generic.KeyedConfiguration;
@@ -11,11 +8,8 @@ import me.lucko.luckperms.common.config.generic.adapter.ConfigurationAdapter;
 import me.lucko.luckperms.common.plugin.LuckPermsPlugin;
 import net.deltapvp.luckpermsdiscord.events.NodeListeners;
 import net.luckperms.api.LuckPerms;
-import net.luckperms.api.event.log.LogPublishEvent;
 import net.luckperms.api.extension.Extension;
 
-import java.awt.*;
-import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.logging.Logger;
 

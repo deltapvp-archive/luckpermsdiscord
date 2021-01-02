@@ -4,9 +4,9 @@ import club.minnced.discord.webhook.WebhookClient;
 import club.minnced.discord.webhook.send.WebhookEmbed;
 import club.minnced.discord.webhook.send.WebhookEmbedBuilder;
 import net.luckperms.api.LuckPerms;
-import net.luckperms.api.event.log.LogBroadcastEvent;
 import net.luckperms.api.event.node.NodeAddEvent;
 import net.luckperms.api.event.node.NodeRemoveEvent;
+
 import java.awt.*;
 
 public class NodeListeners {
