@@ -1,0 +1,46 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'java'
+}
+
+group 'net.deltapvp'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    compileOnly 'net.luckperms:api:5.2'
+    compileOnly 'me.lucko.luckperms:common:5.2-SNAPSHOT'
+    compile("club.minnced:discord-webhooks:0.5.4-rc")
+}
+
+shadowJar {
+    archiveName = "LuckPermsDiscord.jar"
+
+    /*dependencies {
+        include(dependency('net.luckperms:.*'))
+        include(dependency('me.lucko.luckperms:.*'))
+        include(dependency('club.minnced:.*'))
+        include(dependency('org.json:.*'))
+        include(dependency('okhttp3:.*'))
+        include(dependency('com.squareup.okhttp3:.*'))
+        include(dependency('com.github.simplix-softworks:.*'))
+        include(dependency('net.kyori:.*'))
+    }
+
+    relocate 'net.kyori.adventure', 'net.deltapvp.luckpermsdiscord.lib.adventure'*/
+}
+
+artifacts {
+    archives shadowJar
+}
