@@ -6,6 +6,7 @@ import me.lucko.luckperms.common.config.LuckPermsConfiguration;
 import me.lucko.luckperms.common.config.generic.KeyedConfiguration;
 import me.lucko.luckperms.common.config.generic.adapter.ConfigurationAdapter;
 import me.lucko.luckperms.common.plugin.LuckPermsPlugin;
+import net.deltapvp.luckpermsdiscord.events.LogListener;
 import net.deltapvp.luckpermsdiscord.events.NodeListeners;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.extension.Extension;
@@ -37,6 +38,7 @@ public class LuckPermsDiscord implements Extension {
             e.printStackTrace();
         }
         new NodeListeners(client, luckPerms).register();
+        new LogListener(client, luckPerms).register();
     }
 
     @Override
